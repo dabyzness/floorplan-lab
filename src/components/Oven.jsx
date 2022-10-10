@@ -1,5 +1,9 @@
 const Oven = (props) => {
-  return <></>;
+  return (
+    <div className="oven">
+      <h2>Oven</h2>
+    </div>
+  );
 };
 
 export default Oven;
