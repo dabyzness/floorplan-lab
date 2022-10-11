@@ -12,7 +12,9 @@ const FloorPlan = ({ numBeds, numBaths }) => {
   }
 
   for (let i = 1; i <= numBaths; i += 1) {
-    bathArr.push(<Bath key={`bath-${i}`} size={i} />);
+    bathArr.push(
+      <Bath key={`bath-${i}`} size={i % 2 === 1 ? "full" : "half"} />
+    );
   }
 
   return (

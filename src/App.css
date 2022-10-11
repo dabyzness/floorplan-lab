@@ -2,37 +2,77 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div {
+  border: 1px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.floor-plan {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "kitchen kitchen bath-full living-room living-room"
+    "kitchen kitchen bath-full living-room living-room"
+    "kitchen kitchen bath-full bath-half bath-half"
+    "bedroom1 bedroom1 bedroom1 bedroom3 bedroom3"
+    "bedroom2 bedroom2 bedroom2 bedroom3 bedroom3";
+  gap: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.kitchen {
+  grid-area: kitchen;
+  background-color: yellow;
+}
+
+.appliances {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  border: none;
+}
+
+.oven {
+  background-color: purple;
+  color: white;
+  margin: 0.25rem;
+}
+
+.sink {
+  transform: scale(50%);
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bath-full {
+  grid-area: bath-full;
+  background-color: lightblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bath-half {
+  grid-area: bath-half;
+  background-color: lightblue;
+}
+
+.living-room {
+  grid-area: living-room;
+  background-color: green;
+}
+
+.bedroom1 {
+  grid-area: bedroom1;
+  background-color: orange;
+}
+
+.bedroom2 {
+  grid-area: bedroom2;
+  background-color: orange;
+}
+.bedroom3 {
+  grid-area: bedroom3;
+  background-color: orange;
 }

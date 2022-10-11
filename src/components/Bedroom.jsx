@@ -1,7 +1,7 @@
 const Bedroom = ({ bedNum }) => {
   return (
-    <div className="bedroom">
-      <h1>Bedroom</h1>
+    <div className={`bedroom${bedNum}`}>
+      <h1>Bedroom {bedNum}</h1>
     </div>
   );
 };

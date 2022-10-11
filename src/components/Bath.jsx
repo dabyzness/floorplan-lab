@@ -1,7 +1,7 @@
 const Bath = ({ size }) => {
   return (
-    <div className="bath">
-      <h1>{size % 2 === 1 ? "Full Bath" : "Half Bath"}</h1>
+    <div className={`bath-${size}`}>
+      <h1>{size[0].toUpperCase()} Bath</h1>
     </div>
   );
 };
